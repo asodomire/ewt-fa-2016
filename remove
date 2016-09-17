@@ -1,4 +1,0 @@
-rm -rf folder
-git add .
-git commit -a -m "Exercise 1"
-git push origin master
