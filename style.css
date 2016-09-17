@@ -1,3 +1,24 @@
+
+body {
+
+    background-image: url('Beardiepng.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom; 
+	background-size: 30%;
+	font-size: 20px;
+	text-align: center; 
+	
+}
+
 a {
-  font-color: red;
+
+	text-decoration: none;
+
+}
+
+h5 {
+
+	line-height: 10px;
+	
 }
