@@ -3,6 +3,19 @@ $three: (0, 0, 0, 0.3);
 $five: (0, 0, 0, 0.5);
 $ease: box-shadow 0.25s ease;
 
+@mixin webkit($percent) {
+    -webkit-filter: $percent;
+    filter: $percent;
+}
+
+
+@mixin clearfix() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -75,11 +88,9 @@ a:after {
 .feature-poster img {
     max-width: 100%;
     transition: all 0.25s ease;
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
+    @include webkit(brightness(80%));
 	&:hover img{
-		-webkit-filter: brightness(100%);
-		filter: brightness(100%);
+		@include webkit(brightness(100%));
 	}
 }
 
@@ -139,9 +150,7 @@ a:after {
     }
 
     .feature-list:after {
-        content: '';
-        display: table;
-        clear: both;
+		@include clearfix()
     }
 
     .feature {
