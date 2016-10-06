@@ -107,7 +107,7 @@ a:after {
     width: 760px;
     margin: 0 auto; }
 
-  .feature-list:after {
+  .feature-list:after:after {
     content: '';
     display: table;
     clear: both; }
