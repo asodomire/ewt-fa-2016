@@ -1,0 +1,96 @@
+@mixin colorsize($size){
+	font-size: $size;
+	color: white;
+}
+
+@mixin background($url){
+	background-image: url($url);
+	background-attachment: fixed;
+}
+
+
+body{
+	font-family: 'Crimson Text', serif;
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+h3{
+	font-size: 32px;
+}
+
+p{
+	font-size: 26px;
+}
+
+.container{
+	text-align: center;
+}
+
+.projects{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.pageHeader{
+	line-height: 15px;
+	color: black;
+	text-align: center;
+	padding: 20px;
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+.input{
+	height: 200px;
+	width: 200px;
+	line-height: 2px;
+	text-align: center;
+	background: rgba(219, 158, 211, 0.3);
+	p{
+		vertical-align: baseline;
+	}
+}
+
+@media (max-width: 480px){
+	h1{
+		@include colorsize(8vw);
+	}
+	h2{
+		@include colorsize(6vw);
+	}
+	
+	body{
+		@include background('../images/smallBG.jpg');
+	}
+}
+@media (min-width: 481px) and (max-width: 780px){
+	h1{
+		@include colorsize(6vw);
+	}
+	h2{
+		@include colorsize(4vw);
+	}
+	body{
+		@include background('../images/mediumBG.jpg');
+	}
+}
+
+@media (min-width: 781px){
+
+	h1{
+		@include colorsize(5vw);
+	}
+	h2{
+		@include colorsize(2vw);
+	}
+	body{
+		@include background('../images/largeBG.jpg');
+	}
+}
